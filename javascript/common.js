@@ -1,11 +1,11 @@
-$(document).ready(function () {
-  var isLogin = localStorage.getItem("isLogin");
-  if (isLogin !== "true") {
-    window.location.replace("/login/");
-  } else {
-    document.getElementsByTagName("html")[0].style = "";
-  }
-});
+// $(document).ready(function () {
+//   var isLogin = localStorage.getItem("isLogin");
+//   if (isLogin !== "true") {
+//     window.location.replace("/login/");
+//   } else {
+//     document.getElementsByTagName("html")[0].style = "";
+//   }
+// });
 
 function logout() {
   localStorage.removeItem("isLogin");

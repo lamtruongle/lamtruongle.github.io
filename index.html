@@ -1,159 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" style="visibility: hidden">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>QR List</title>
+    <title>Login</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
-    <div class="menu-bar"><span onclick="logout()">Logout</span></div>
-
-    <div class="w3-content w3-display-container">
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート1</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_0"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no1-arthur"
-          role="button"
-        >
-          QRを編集する
-        </a>
+    <div id="loginContainer">
+      <div class="login-form px-4 xl:px-[90px] py-6 xl:py-[150px]">
+        <div class="grid grid-cols-12">
+          <div class="col-span-12 lg:col-span-6">
+            <div class="flex h-full items-center justify-center pb-10 xl:pb-0">
+              <img src="images/logo.png" alt="logo" />
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div class="flex flex-col h-full items-center justify-center">
+              <h2 class="pb-10 xl:pb-[54px]">Member Login</h2>
+              <form id="frmLogin">
+                <div class="mb-3 relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    placeholder="Username"
+                  />
+                  <img
+                    src="images/ic-user.svg"
+                    alt="user"
+                    class="absolute top-[15px] left-[25px] w-[20px]"
+                  />
+                </div>
+                <div class="mb-3 relative">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                  />
+                  <img
+                    src="images/ic-lock.svg"
+                    alt="user"
+                    class="absolute top-[15px] left-[25px] w-[20px]"
+                  />
+                </div>
+                <button type="button" class="mt-8" onclick="login()">
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート2</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_1"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no2-lancelot"
-          role="button"
-        >
-          QRを編集する
-        </a>
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート3</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_2"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no3-gawain"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート4</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_3"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no4-percival"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート5</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_4"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no5-galahad"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート6</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_5"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no6-kay"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート7</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_6"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no7-bedivere"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート8</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_7"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no8-tristan"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート9</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_8"></p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no9-gareth"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <div class="w3-display-container mySlides">
-        <span class="font-medium">テンプレート10</span>
-        <img class="qr-image" src="images\pattern-No1.png" />
-        <p id="img_modified_9">Last modified: 5 day ago</p>
-        <a
-          class="btn btn-edit"
-          href="edit_image.html?qr_folder=no10-bors"
-          role="button"
-          >QRを編集する</a
-        >
-      </div>
-
-      <button
-        class="w3-button w3-display-left w3-black !bg-[#3b3b3b]"
-        onclick="plusDivs(-1)"
-      >
-        &#10094;
-      </button>
-      <button
-        class="w3-button w3-display-right w3-black !bg-[#3b3b3b]"
-        onclick="plusDivs(1)"
-      >
-        &#10095;
-      </button>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://momentjs.com/downloads/moment.js"></script>
-    <script src="javascript/common.js"></script>
-    <script src="javascript/index.js"></script>
+    <script src="javascript/login.js"></script>
   </body>
 </html>
