@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div id="loginContainer">
+      <div class="login-form px-4 xl:px-[90px] py-6 xl:py-[150px]">
+        <div class="grid grid-cols-12">
+          <div class="col-span-12 lg:col-span-6">
+            <div class="flex h-full items-center justify-center pb-10 xl:pb-0">
+              <img src="images/logo.png" alt="logo" />
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div class="flex flex-col h-full items-center justify-center">
+              <h2 class="pb-10 xl:pb-[54px]">Member Login</h2>
+              <form id="frmLogin">
+                <div class="mb-3 relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    placeholder="Username"
+                  />
+                  <img
+                    src="images/ic-user.svg"
+                    alt="user"
+                    class="absolute top-[15px] left-[25px] w-[20px]"
+                  />
+                </div>
+                <div class="mb-3 relative">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                  />
+                  <img
+                    src="images/ic-lock.svg"
+                    alt="user"
+                    class="absolute top-[15px] left-[25px] w-[20px]"
+                  />
+                </div>
+                <button type="button" class="mt-8" onclick="login()">
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript/login.js"></script>
+  </body>
+</html>

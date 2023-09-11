@@ -1,0 +1,36 @@
+.menu-bar {
+  padding: 8px 16px 0 8px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.menu-bar span:hover {
+  color: #e51871;
+}
+
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.mySlides img {
+  margin: auto;
+}
+
+.mySlides p {
+  margin-bottom: 16px;
+}
+
+.mySlides .btn-edit {
+  background-color: #e51871;
+  border-radius: 100vh;
+  padding: 8px 16px;
+  color: #ffffff;
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.mySlides .btn-edit:hover {
+  background-color: #3b3b3b;
+}

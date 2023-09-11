@@ -1,0 +1,42 @@
+body {
+  overflow-x: hidden;
+}
+
+.edit-image-container {
+  padding: 24px 0;
+}
+
+.edit-image-container .container label {
+  font-weight: bold;
+}
+
+.edit-image-container .container p {
+  font-size: 12px;
+}
+
+.edit-image-container .container input {
+  margin-right: 16px;
+}
+
+.edit-image-container .container button.btn-delete {
+  border: 0;
+  background-color: transparent;
+}
+
+.edit-image-container .container button.btn-delete img {
+  width: 24px;
+}
+
+.edit-image-container .logout:hover {
+  color: #e51871;
+  cursor: pointer;
+}
+
+.edit-image-container .back-to-home {
+  cursor: pointer;
+  width: 24px;
+}
+
+.edit-image-container .button-function button {
+  border-radius: 100vh;
+}
